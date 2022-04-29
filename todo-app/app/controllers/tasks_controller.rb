@@ -19,7 +19,6 @@ end
 
 private
   def task_params
-　　#モデル作成時に作ったやつ
     params.require(:task).permit(:title, :body)
   end
 end
