@@ -1,8 +1,8 @@
 <h1>やること一覧</h1>
 
-<%= link_to '新規作成', new_task_path %>
+<td><%= link_to '新規作成', new_task_path, class: "btn btn-primary" %></td>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>やること</th>
@@ -15,8 +15,8 @@
     <tr>
       <td><%= task.title %></td>
       <td><%= task.body %></td>
-      <td><%= link_to '編集', edit_task_path(task) %></td> 
-      <td><%= link_to '削除', task, method: :delete, data: { confirm: 'You sure?' } %></td>
+      <td><%= link_to '編集', edit_task_path(task), class: "btn btn-success"  %></td>
+      <td><%= link_to '削除', task, method: :delete, data: { confirm: 'You sure?' }, class: "btn btn-danger" %></td>
     </tr>
     <% end %>
   </tbody>
